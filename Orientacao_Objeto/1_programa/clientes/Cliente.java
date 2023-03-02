@@ -1,15 +1,18 @@
 package clientes;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Cliente {
     private String nome;
     private String endereco;
-    private String dataNasc;
+    private Date dataNasc;
 
-
-    public Cliente(String nome, String endereco, String dataNasc) {
+    public Cliente(String nome, String endereco, String dataNasc) throws ParseException {
         this.nome = nome;
         this.endereco = endereco;
-        this.dataNasc = dataNasc;
+        this.dataNasc = new SimpleDateFormat("dd/MM/yyyy").parse(dataNasc);
     }
 
 
@@ -33,12 +36,12 @@ public class Cliente {
     }
 
 
-    public String getDataNasc() {
+    public Date getDataNasc() {
         return dataNasc;
     }
 
 
-    public void setDataNasc(String dataNasc) {
+    public void setDataNasc(Date dataNasc) {
         this.dataNasc = dataNasc;
     }
 

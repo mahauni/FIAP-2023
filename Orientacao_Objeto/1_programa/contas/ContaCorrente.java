@@ -38,6 +38,7 @@ public class ContaCorrente extends Conta {
         System.out.println("Saldo: " + this.saldo);
         System.out.println("Saldo investimento: " + this.saldoInvestimento);
         System.out.println("Saldo total: " + (this.saldo + this.saldoInvestimento));
+        System.out.println("Data de abertura de conta: " + this.dataAbertura);
     }
 
     

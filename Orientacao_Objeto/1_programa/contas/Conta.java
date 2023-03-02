@@ -1,17 +1,27 @@
 package contas;
 
+import java.util.Calendar;
+import java.util.Date;
+
 import clientes.Cliente;
 
 // abstract na class proibe a instancia da classe
 public abstract class Conta { // superclass
-    protected Cliente cliente;
-    protected long numeroConta;
+    protected final Cliente cliente;
+    protected final long numeroConta;
     protected double saldo;
+    protected Date dataAbertura = Calendar.getInstance().getTime();
+    private static long contador;
 
     // contructor
     public Conta(Cliente cliente, long numeroConta) { // composicao
         this.cliente = cliente;
         this.numeroConta = numeroConta;
+        contador += 1;
+    }
+
+    public static void exibirContador() {
+        System.out.println("Contas: " + contador);
     }
 
 

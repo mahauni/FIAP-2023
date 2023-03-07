@@ -1,6 +1,7 @@
 package contas;
 
 import clientes.Cliente;
+import interfaces.Produto;
 
 public class ContaCorrente extends Conta {
     private double saldoInvestimento;
@@ -35,11 +36,18 @@ public class ContaCorrente extends Conta {
     @Override
     public void exibirSaldo() {
         System.out.println("Cliente: " + cliente.getNome());
+        System.out.println("Data de nascimento: " + this.cliente.getDataNasc());
         System.out.println("Saldo: " + this.saldo);
         System.out.println("Saldo investimento: " + this.saldoInvestimento);
         System.out.println("Saldo total: " + (this.saldo + this.saldoInvestimento));
         System.out.println("Data de abertura de conta: " + this.dataAbertura);
     }
 
+    public void investimento(double valor, Produto produto) {
+        boolean teste = this.sacar(valor);
     
+        if (teste) {
+            saldoInvestimento += produto.investir(valor);
+        }
+    }   
 }

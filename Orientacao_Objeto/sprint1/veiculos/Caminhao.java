@@ -1,8 +1,10 @@
 public class Caminhao extends Veiculo {
     private boolean freioDeMao;
+    private boolean cambioAutomatico;
 
-    public Caminhao(int motor, int freio) {
+    public Caminhao(int motor, int freio, boolean cambioAutomatico) {
         super(motor, freio);
+        this.cambioAutomatico = cambioAutomatico;
         this.freioDeMao = true;
     }
 
@@ -27,7 +29,35 @@ public class Caminhao extends Veiculo {
 
     @Override
     public void acelerar(int tempo) {
-        if (isOn() && tempo > 0 && !freioDeMaoAtivado() && this.cambio > 0) {
+        if (isOn() && tempo > 0 && !freioDeMaoAtivado() && this.cambio > 0 && cambioAutomatico == false) {
+            switch (this.cambio) {
+                case 1:
+                    if (this.velocidade < 30)
+                        this.velocidade += this.motor;
+                    break;
+                case 2:
+                    if (this.velocidade < 60)
+                        this.velocidade += this.motor;
+                    break;
+                case 3:
+                    if (this.velocidade < 60)
+                        this.velocidade += this.motor;
+                    break;
+                case 4:
+                    if (this.velocidade < 90)
+                        this.velocidade += this.motor;
+                    break;
+                case 5:
+                    if (this.velocidade < 120)
+                        this.velocidade += this.motor;
+                    break;
+                case 6:
+                    this.velocidade += this.motor;
+                    break;
+            }
+            this.velocidade += this.motor * 1;
+            acelerar(tempo - 1);
+        } else if (isOn() && tempo > 0 && !freioDeMaoAtivado() && this.cambio > 0 && cambioAutomatico == true) {
             this.velocidade += this.motor * 1;
             acelerar(tempo - 1);
         }

@@ -1,6 +1,7 @@
 import java.text.ParseException;
 
 import clientes.Cliente;
+import contas.Conta;
 import contas.ContaCorrente;
 import produtos.CDB;
 import produtos.Funds;
@@ -43,6 +44,6 @@ public class exec {
         System.out.println("Saldo investimento: " + contaLucas.getSaldoInvestimento());
         contaLucas.exibirSaldo();
 
-        contaDavi.exibirContador();
+        Conta.exibirContador();
     }
 }

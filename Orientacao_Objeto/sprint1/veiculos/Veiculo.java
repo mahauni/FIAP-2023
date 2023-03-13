@@ -2,27 +2,27 @@ public abstract class Veiculo {
     protected int motor;
     protected int freio;
     protected boolean activated;
-    protected int cambio;
     protected int velocidade;
 
     public Veiculo(int motor, int freio) {
         this.motor = motor;
         this.freio = freio;
         this.activated = false;
-        this.cambio = 0;
         this.velocidade = 0;
     }
 
     public void ligar() {
-        if (!isOn())
+        if (!isOn()) {
             this.activated = true;
-        else
+            System.out.println("O carro foi ligado!");
+        } else
             System.out.println("O carro ja esta ligado!");    
     }
     public void desligar() {
-        if (isOn())
+        if (isOn()) {
             this.activated = false;
-        else
+            System.out.println("O carro foi desligado!");
+        } else
             System.out.println("O carro ja esta desligado!");    
     }
     public boolean isOn() {
@@ -40,21 +40,12 @@ public abstract class Veiculo {
             freiar(tempo - 1);
         }
     }
-    public void aumentarCambio() {
-        if (isOn() && this.cambio < 7)
-            this.cambio += 1;        
-    }
-    // Moto nao tem Ré que seria o nosso cambio ao -1
-    public void diminuirCambio() {
-        if (isOn() && this.cambio > -2)
-            this.cambio -= 1;
-    }
+
+    public abstract void aumentarCambio();
+    public abstract void diminuirCambio(); 
     public abstract void acelerar(int tempo);
     
 
-    public int getCambio() {
-        return cambio;
-    }
     public int getVelocidade() {
         return velocidade;
     }    

@@ -34,38 +34,32 @@ public class Caminhao extends Veiculo {
         if (isOn() && tempo > 0 && !freioDeMaoAtivado() && this.cambio > 0 && cambioAutomatico == false) {
             switch (this.cambio) {
                 case 1:
-                    if (this.velocidade < 20)
-                        this.velocidade += this.motor;
+                    this.velocidade = marcha(this.cambio, this.velocidade, this.motor);
                     break;
                 case 2:
-                    if (this.velocidade < 40)
-                        this.velocidade += this.motor;
+                    this.velocidade = marcha(this.cambio, this.velocidade, this.motor);
                     break;
                 case 3:
-                    if (this.velocidade < 60)
-                        this.velocidade += this.motor;
+                    this.velocidade = marcha(this.cambio, this.velocidade, this.motor);
                     break;
                 case 4:
-                    if (this.velocidade < 80)
-                        this.velocidade += this.motor;
+                    this.velocidade = marcha(this.cambio, this.velocidade, this.motor);
                     break;
                 case 5:
-                    if (this.velocidade < 100)
-                        this.velocidade += this.motor;
+                    this.velocidade = marcha(this.cambio, this.velocidade, this.motor);
                     break;
                 case 6:
-                    if (this.velocidade < 120) {
-                        this.velocidade += this.motor;
-                    }
+                    this.velocidade = marcha(this.cambio, this.velocidade, this.motor);
                     break;
                 case 7:
-                    if (this.velocidade < 140) {
-                        this.velocidade += this.motor;
-                    }
+                    this.velocidade = marcha(this.cambio, this.velocidade, this.motor);
                     break;
                 case 8:
                     if (this.velocidade < 200) {
-                        this.velocidade += this.motor;
+                        if (this.velocidade + this.motor > 200) {
+                            this.velocidade = 200;
+                        } else
+                            this.velocidade += this.motor;
                     }
                     break;
             }
@@ -73,6 +67,13 @@ public class Caminhao extends Veiculo {
         } else if (isOn() && tempo > 0 && !freioDeMaoAtivado() && this.cambio > 0 && cambioAutomatico == true) {
             this.velocidade += this.motor * 1;
             acelerar(tempo - 1);
+        } else if (!isOn()) {
+            ligar();
+            System.out.println("O carro foi ligado");
+            acelerar(tempo);
+        } else if (freioDeMaoAtivado()) {
+            freioDeMaoActivate();
+            System.out.println("O freio de mao foi ativado");
         }
     }
 
@@ -90,5 +91,15 @@ public class Caminhao extends Veiculo {
             this.cambio -= 1;
         else
             System.out.println("Voce esta no limite da marcha!");
+    }
+    
+    private int marcha(int marcha, int velocidade, int motor) {
+        if (velocidade < 20 * marcha) {
+            if (velocidade + motor > 20 * marcha) {
+                velocidade = 20 * marcha;
+            } else
+                velocidade += motor;
+        }
+        return velocidade;
     }
 }

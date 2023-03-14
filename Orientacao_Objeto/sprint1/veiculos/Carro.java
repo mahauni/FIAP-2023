@@ -50,52 +50,22 @@ public class Carro extends Veiculo {
         if (isOn() && tempo > 0 && !freioDeMaoAtivado() && this.cambio > 0 && cambioAutomatico == false) {
             switch (this.cambio) {
                 case 1:
-                    if (this.getVelocidade() < 30) {
-                        if (this.velocidade + this.motor * 2 > 30) {
-                            this.velocidade = 30;
-                        } else
-                            this.velocidade += this.motor * 2;
-                    }
+                    this.velocidade = marcha(this.cambio, this.velocidade, this.motor);
                     break;
                 case 2:
-                    if (this.velocidade < 60) {
-                        if (this.velocidade + this.motor * 2 > 60) {
-                            this.velocidade = 60;
-                        } else
-                            this.velocidade += this.motor * 2;
-                    }
+                    this.velocidade = marcha(this.cambio, this.velocidade, this.motor);
                     break;
                 case 3:
-                    if (this.velocidade < 90) {
-                        if (this.velocidade + this.motor * 2 > 90) {
-                            this.velocidade = 90;
-                        } else
-                            this.velocidade += this.motor * 2;
-                    }
+                    this.velocidade = marcha(this.cambio, this.velocidade, this.motor);
                     break;
                 case 4:
-                    if (this.velocidade < 120) {
-                        if (this.velocidade + this.motor * 2 > 120) {
-                            this.velocidade = 120;
-                        } else
-                            this.velocidade += this.motor * 2;
-                    }
+                    this.velocidade = marcha(this.cambio, this.velocidade, this.motor);
                     break;
                 case 5:
-                    if (this.velocidade < 150) {
-                        if (this.velocidade + this.motor * 2 > 150) {
-                            this.velocidade = 150;
-                        } else
-                            this.velocidade += this.motor * 2;
-                    }
+                    this.velocidade = marcha(this.cambio, this.velocidade, this.motor);
                     break;
                 case 6:
-                    if (this.velocidade < 180) {
-                        if (this.velocidade + this.motor * 2 > 180) {
-                            this.velocidade = 180;
-                        } else
-                            this.velocidade += this.motor * 2;
-                    }
+                    this.velocidade = marcha(this.cambio, this.velocidade, this.motor);
                     break;
                 case 7:
                     if (this.velocidade < 240) {
@@ -119,5 +89,15 @@ public class Carro extends Veiculo {
             System.out.println("O freio de mao foi ativado");
         }
         // tem que ativar o carro quando acelerar quando o carro tentou acelerar e estiver desligado
+    }
+
+    private int marcha(int marcha, int velocidade, int motor) {
+        if (velocidade < 30 * cambio) {
+            if (velocidade + motor * 2 > 30 * cambio) {
+                velocidade = 30 * cambio;
+            } else
+                velocidade += motor * 2;
+        }
+        return velocidade;
     }
 }

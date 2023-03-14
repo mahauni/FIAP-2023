@@ -11,44 +11,19 @@ public class Moto extends Veiculo {
         if (isOn() && tempo > 0 && this.cambio > 0) {
             switch (this.cambio) {
                 case 1:
-                    if (this.velocidade < 40) {
-                        if (this.velocidade + this.motor * 3 > 40) {
-                            this.velocidade = 40;
-                        } else
-                            this.velocidade += this.motor * 3;
-                    }
+                    this.velocidade = marcha(this.cambio, this.velocidade, this.motor);
                     break;
                 case 2:
-                    if (this.velocidade < 80) {
-                        if (this.velocidade + this.motor * 3 > 80) {
-                            this.velocidade = 80;
-                        } else
-                            this.velocidade += this.motor * 3;
-                    }
+                    this.velocidade = marcha(this.cambio, this.velocidade, this.motor);
                     break;
                 case 3:
-                    if (this.velocidade < 120) {
-                        if (this.velocidade + this.motor * 3 > 120) {
-                            this.velocidade = 120;
-                        } else
-                            this.velocidade += this.motor * 3;
-                    }
+                    this.velocidade = marcha(this.cambio, this.velocidade, this.motor);
                     break;
                 case 4:
-                    if (this.velocidade < 160) {
-                        if (this.velocidade + this.motor * 3 > 160) {
-                            this.velocidade = 160;
-                        } else
-                            this.velocidade += this.motor * 3;
-                    }
+                    this.velocidade = marcha(this.cambio, this.velocidade, this.motor);
                     break;
                 case 5:
-                    if (this.velocidade < 200) {
-                        if (this.velocidade + this.motor * 3 > 200) {
-                            this.velocidade = 200;
-                        } else
-                            this.velocidade += this.motor * 3;
-                    }
+                    this.velocidade = marcha(this.cambio, this.velocidade, this.motor);
                     break;
                 case 6:
                     if (this.velocidade < 270) {
@@ -82,5 +57,15 @@ public class Moto extends Veiculo {
             this.cambio -= 1;
         else
             System.out.println("Voce esta no limite da marcha!");
+    }
+
+    private int marcha(int cambio, int velocidade, int motor) {
+        if (velocidade < 40 * cambio) {
+            if (velocidade + motor * 3 > 40 * cambio) {
+                velocidade = 40 * cambio;
+            } else
+                velocidade += motor * 3;
+        }
+        return velocidade;
     }
 }

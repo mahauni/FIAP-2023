@@ -8,9 +8,12 @@ public abstract class Veiculo {
     protected String marca;
     protected String modelo;
 
-    public Veiculo(int motor, int freio) {
+    public Veiculo(int motor, int freio, String placa, String marca, String modelo) {
         this.motor = motor;
         this.freio = freio;
+        this.placa = placa;
+        this.marca = marca;
+        this.modelo = modelo;
         this.activated = false;
         this.velocidade = 0;
     }

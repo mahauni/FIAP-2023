@@ -4,6 +4,10 @@ public abstract class Veiculo {
     protected boolean activated;
     protected int velocidade;
 
+    protected String placa;
+    protected String marca;
+    protected String modelo;
+
     public Veiculo(int motor, int freio) {
         this.motor = motor;
         this.freio = freio;
@@ -48,5 +52,5 @@ public abstract class Veiculo {
 
     public int getVelocidade() {
         return velocidade;
-    }    
+    }
 }

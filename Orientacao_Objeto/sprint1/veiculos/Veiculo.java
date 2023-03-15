@@ -1,3 +1,5 @@
+package veiculos;
+
 public abstract class Veiculo {
     protected int motor;
     protected int freio;
@@ -48,8 +50,6 @@ public abstract class Veiculo {
         }
     }
 
-    public abstract void aumentarCambio();
-    public abstract void diminuirCambio(); 
     public abstract void acelerar(int tempo);
     
 

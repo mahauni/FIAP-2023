@@ -1,10 +1,14 @@
-public class Carro extends Veiculo {
+package veiculos;
+
+import interfaces.Marcha;
+
+public class Carro extends Veiculo implements Marcha {
     private boolean freioDeMao;
     private int cambio;
     private boolean cambioAutomatico;
 
-    public Carro(int motor, int freio, boolean cambioAutomatico) {
-        super(motor, freio);
+    public Carro(int motor, int freio, boolean cambioAutomatico, String placa, String marca, String modelo) {
+        super(motor, freio, placa, marca, modelo);
         this.freioDeMao = true;
         this.cambio = 0;
         this.cambioAutomatico = cambioAutomatico;
@@ -27,22 +31,6 @@ public class Carro extends Veiculo {
             this.velocidade -= this.motor;
             re(tempo - 1);
         }
-    }
-
-    @Override
-    public void aumentarCambio() {
-        if (isOn() && this.cambio < 7)
-            this.cambio += 1;
-        else
-            System.out.println("Voce esta no limite da marcha");
-    }
-    
-    @Override
-    public void diminuirCambio() {
-        if (isOn() && this.cambio > -1)
-            this.cambio -= 1;
-        else
-            System.out.println("Voce esta no limite da marcha");
     }
 
     @Override
@@ -88,10 +76,10 @@ public class Carro extends Veiculo {
             freioDeMaoActivate();
             System.out.println("O freio de mao foi ativado");
         }
-        // tem que ativar o carro quando acelerar quando o carro tentou acelerar e estiver desligado
     }
 
-    private int marcha(int marcha, int velocidade, int motor) {
+    @Override
+    public int marcha(int cambio, int velocidade, int motor) {
         if (velocidade < 30 * cambio) {
             if (velocidade + motor * 2 > 30 * cambio) {
                 velocidade = 30 * cambio;
@@ -100,4 +88,20 @@ public class Carro extends Veiculo {
         }
         return velocidade;
     }
+
+    @Override
+    public void aumentarCambio() {
+        if (isOn() && this.cambio < 7)
+            this.cambio += 1;
+        else
+            System.out.println("Voce esta no limite da marcha");
+    }
+    
+    @Override
+    public void diminuirCambio() {
+        if (isOn() && this.cambio > -1)
+            this.cambio -= 1;
+        else
+            System.out.println("Voce esta no limite da marcha");
+    } 
 }

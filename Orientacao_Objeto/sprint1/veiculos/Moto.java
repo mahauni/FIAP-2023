@@ -1,8 +1,12 @@
-public class Moto extends Veiculo {
+package veiculos;
+
+import interfaces.Marcha;
+
+public class Moto extends Veiculo implements Marcha {
     private int cambio;
 
-    public Moto(int motor, int freio) {
-        super(motor, freio);
+    public Moto(int motor, int freio, boolean cambioAutomatico, String placa, String marca, String modelo) {
+        super(motor, freio, placa, marca, modelo);
         this.cambio = 0;
     }
 
@@ -59,7 +63,7 @@ public class Moto extends Veiculo {
             System.out.println("Voce esta no limite da marcha!");
     }
 
-    private int marcha(int cambio, int velocidade, int motor) {
+    public int marcha(int cambio, int velocidade, int motor) {
         if (velocidade < 40 * cambio) {
             if (velocidade + motor * 3 > 40 * cambio) {
                 velocidade = 40 * cambio;

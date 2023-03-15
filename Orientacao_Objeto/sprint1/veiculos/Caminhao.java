@@ -1,10 +1,14 @@
-public class Caminhao extends Veiculo {
+package veiculos;
+
+import interfaces.Marcha;
+
+public class Caminhao extends Veiculo implements Marcha {
     private boolean freioDeMao;
     private boolean cambioAutomatico;
     protected int cambio;
 
-    public Caminhao(int motor, int freio, boolean cambioAutomatico) {
-        super(motor, freio);
+    public Caminhao(int motor, int freio, boolean cambioAutomatico, String placa, String marca, String modelo) {
+        super(motor, freio, placa, marca, modelo);
         this.cambioAutomatico = cambioAutomatico;
         this.freioDeMao = true;
         this.cambio = 0;
@@ -93,7 +97,7 @@ public class Caminhao extends Veiculo {
             System.out.println("Voce esta no limite da marcha!");
     }
     
-    private int marcha(int marcha, int velocidade, int motor) {
+    public int marcha(int marcha, int velocidade, int motor) {
         if (velocidade < 20 * marcha) {
             if (velocidade + motor > 20 * marcha) {
                 velocidade = 20 * marcha;

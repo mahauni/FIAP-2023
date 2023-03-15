@@ -5,7 +5,7 @@ import interfaces.Marcha;
 public class Moto extends Veiculo implements Marcha {
     private int cambio;
 
-    public Moto(int motor, int freio, boolean cambioAutomatico, String placa, String marca, String modelo) {
+    public Moto(int motor, int freio, String placa, String marca, String modelo) {
         super(motor, freio, placa, marca, modelo);
         this.cambio = 0;
     }

@@ -14,11 +14,11 @@ public class Caminhao extends Veiculo implements Marcha {
         this.cambio = 0;
     }
 
-    public void freioDeMaoActivate() {
+    public void AtivarFreioDeMao() {
         this.freioDeMao = true;
         this.velocidade = 0;
     }
-    public void freioDeMaoDeactivate() {
+    public void DesativarFreioDeMao() {
         this.freioDeMao = false;
     }
     public boolean freioDeMaoAtivado() {
@@ -32,6 +32,7 @@ public class Caminhao extends Veiculo implements Marcha {
             re(tempo - 1);
         }
     }
+
 
     @Override
     public void acelerar(int tempo) {
@@ -76,7 +77,7 @@ public class Caminhao extends Veiculo implements Marcha {
             System.out.println("O carro foi ligado");
             acelerar(tempo);
         } else if (freioDeMaoAtivado()) {
-            freioDeMaoActivate();
+            DesativarFreioDeMao();
             System.out.println("O freio de mao foi ativado");
         }
     }

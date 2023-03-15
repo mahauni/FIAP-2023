@@ -14,11 +14,11 @@ public class Carro extends Veiculo implements Marcha {
         this.cambioAutomatico = cambioAutomatico;
     }
     
-    public void freioDeMaoActivate() {
+    public void AtivarFreioDeMao() {
         this.freioDeMao = true;
         this.velocidade = 0;
     }
-    public void freioDeMaoDeactivate() {
+    public void DesativarFreioDeMao() {
         this.freioDeMao = false;
     }
     public boolean freioDeMaoAtivado() {
@@ -73,7 +73,7 @@ public class Carro extends Veiculo implements Marcha {
             System.out.println("O carro foi ligado");
             acelerar(tempo);
         } else if (freioDeMaoAtivado()) {
-            freioDeMaoActivate();
+            DesativarFreioDeMao();
             System.out.println("O freio de mao foi ativado");
         }
     }
@@ -103,5 +103,5 @@ public class Carro extends Veiculo implements Marcha {
             this.cambio -= 1;
         else
             System.out.println("Voce esta no limite da marcha");
-    } 
+    }
 }

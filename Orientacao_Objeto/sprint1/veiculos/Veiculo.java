@@ -23,16 +23,16 @@ public abstract class Veiculo {
     public void ligar() {
         if (!isOn()) {
             this.activated = true;
-            System.out.println("O carro foi ligado!");
+            System.out.println("O veiculo foi ligado!");
         } else
-            System.out.println("O carro ja esta ligado!");    
+            System.out.println("O veiculo ja esta ligado!");    
     }
     public void desligar() {
         if (isOn()) {
             this.activated = false;
-            System.out.println("O carro foi desligado!");
+            System.out.println("O veiculo foi desligado!");
         } else
-            System.out.println("O carro ja esta desligado!");    
+            System.out.println("O veiculo ja esta desligado!");    
     }
     public boolean isOn() {
         if (this.activated == true)
@@ -55,5 +55,17 @@ public abstract class Veiculo {
 
     public int getVelocidade() {
         return velocidade;
+    }
+    public boolean isActivated() {
+        return activated;
+    }
+    public String getPlaca() {
+        return placa;
+    }
+    public String getMarca() {
+        return marca;
+    }
+    public String getModelo() {
+        return modelo;
     }
 }

@@ -48,6 +48,15 @@ public abstract class Veiculo {
             this.velocidade -= this.freio;
             freiar(tempo - 1);
         }
+
+        if (isOn() && tempo > 0 && this.velocidade < 0) {
+            if (this.velocidade * -1 < this.freio) {
+                this.velocidade = 0;
+                return;
+            }
+            this.velocidade += this.freio;
+            freiar(tempo - 1);
+        }
     }
 
     public abstract void acelerar(int tempo);

@@ -4,6 +4,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 import clientes.Cliente;
+import errors.SaldoInsuficiente;
 
 // abstract na class proibe a instancia da classe
 public abstract class Conta { // superclass
@@ -30,17 +31,16 @@ public abstract class Conta { // superclass
         this.saldo += valor;
     }
 
-    public boolean sacar(double valor) {
+    public boolean sacar(double valor) throws SaldoInsuficiente {
         if (this.saldo >= valor) {
             this.saldo -= valor;
             return true;
+        } else {
+            throw new SaldoInsuficiente("Saldo insuficiente");
         }
-
-        return false;
     }
 
-
-    public void transferir(Conta conta, double valor) {
+    public void transferir(Conta conta, double valor) throws SaldoInsuficiente {
         boolean teste = this.sacar(valor);
         if (teste == true) {
             conta.depositar(valor);

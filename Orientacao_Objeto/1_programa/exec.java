@@ -3,6 +3,7 @@ import java.text.ParseException;
 import clientes.Cliente;
 import contas.Conta;
 import contas.ContaCorrente;
+import errors.SaldoInsuficiente;
 import produtos.CDB;
 import produtos.Funds;
 import produtos.LCA;
@@ -28,19 +29,43 @@ public class exec {
         contaLucas.depositar(69420);
         contaDavi.depositar(42069);
 
-        contaDavi.transferir(contaLucas, 420);
-        contaDavi.sacar(42069);
+        try {
+            contaDavi.transferir(contaLucas, 420);
+        } catch (SaldoInsuficiente e) {
+            e.printStackTrace();
+        }
+        try {
+            contaDavi.sacar(42069);
+        } catch (SaldoInsuficiente e) {
+            e.printStackTrace();
+        }
 
         contaLucas.exibirSaldo();
         contaDavi.exibirSaldo();
 
-        contaLucas.investimento(420, cbd);
+        try {
+            contaLucas.investimento(420, cbd);
+        } catch (SaldoInsuficiente e) {
+            e.printStackTrace();
+        }
         System.out.println("Saldo investimento: " + contaLucas.getSaldoInvestimento());
-        contaLucas.investimento(420, funds);
+        try {
+            contaLucas.investimento(420, funds);
+        } catch (SaldoInsuficiente e) {
+            e.printStackTrace();
+        }
         System.out.println("Saldo investimento: " + contaLucas.getSaldoInvestimento());
-        contaLucas.investimento(420, lca);
+        try {
+            contaLucas.investimento(420, lca);
+        } catch (SaldoInsuficiente e) {
+            e.printStackTrace();
+        }
         System.out.println("Saldo investimento: " + contaLucas.getSaldoInvestimento());
-        contaLucas.investimento(420, lci);
+        try {
+            contaLucas.investimento(420, lci);
+        } catch (SaldoInsuficiente e) {
+            e.printStackTrace();
+        }
         System.out.println("Saldo investimento: " + contaLucas.getSaldoInvestimento());
         contaLucas.exibirSaldo();
 

@@ -1,6 +1,7 @@
 package contas;
 
 import clientes.Cliente;
+import errors.SaldoInsuficiente;
 import interfaces.Produto;
 
 public class ContaCorrente extends Conta {
@@ -11,7 +12,7 @@ public class ContaCorrente extends Conta {
     }
 
 
-    public void investir(double valor, int tipo) {
+    public void investir(double valor, int tipo) throws SaldoInsuficiente {
         boolean teste = this.sacar(valor);
         if (teste == true) {
             switch (tipo) {
@@ -43,11 +44,21 @@ public class ContaCorrente extends Conta {
         System.out.println("Data de abertura de conta: " + this.dataAbertura);
     }
 
-    public void investimento(double valor, Produto produto) {
+    public void investimento(double valor, Produto produto) throws SaldoInsuficiente {
         boolean teste = this.sacar(valor);
     
         if (teste) {
             saldoInvestimento += produto.investir(valor);
         }
-    }   
+    }
+
+    public void resgatar(Conta conta, double valor) throws SaldoInsuficiente {
+        boolean teste = saldoInvestimento >= valor;
+
+        if (teste) {
+            saldoInvestimento -= valor;
+            this.depositar(valor);
+        }
+    }
+
 }

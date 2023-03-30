@@ -20,6 +20,10 @@ public class ex2 {
         Usuario usuario = (Usuario) object;
         System.out.println(usuario.getNome());
 
+        Usuario s = mapa.get("Gabriel");
+
+        System.out.println(s.getNome());
+
         System.out.println(mapa.get("Trogodita").getId());
     }
 }

@@ -1,23 +1,19 @@
 package queues;
 
-// Dont use a count to try to verify if it is full
-// Dequeue does have a sentinel value -1 when you try to dequeue more 
-// than you have. Better way to do this is to throw an error.
-// BETTER MEAN IS TO DO IT IF THIS WAS NOT ONLY A DEMONSTRATION
-public class MyQueue {
+public class QueueString {
     private int ini;
     private int fim;
     private int N;
-    private int dados[];
+    private String dados[];
 
     public void init(int n) {
         ini = 0;
         fim = 0;
         N = n;
-        dados = new int[N];
+        dados = new String[N];
     }
 
-    public void enqueue(int e) {
+    public void enqueue(String e) {
         if (!isFull()) {
             dados[fim % N] = e;
             fim++;
@@ -26,13 +22,13 @@ public class MyQueue {
         }
     }
 
-    public int dequeue() {
+    public String dequeue() {
         if (!isEmpty()) {
-            int e = dados[ini % N];
+            String e = dados[ini % N];
             ini++;
             return e;
         }
-        return -1;
+        return "";
     }
 
     public boolean isEmpty() {
@@ -49,9 +45,9 @@ public class MyQueue {
             return false;
     }
 
-    public int first() {
+    public String first() {
         if (isEmpty()) {
-            return -1;
+            return "";
         }
         return dados[ini % N];
     }

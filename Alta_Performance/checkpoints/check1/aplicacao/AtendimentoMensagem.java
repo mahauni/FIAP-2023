@@ -23,8 +23,10 @@ public class AtendimentoMensagem {
             System.out.println("2) Atendimento de Mensagem");
             System.out.println("3) Recevimento e Encaminhamento de Resolucao");
             System.out.println("0) Encerrar o Programa");
-            System.out.println("O que voce deseja fazer: ");
+            System.out.print("O que voce deseja fazer: ");
             option = sc.nextInt();
+
+            System.out.println("-----------------------------------------------");
 
             switch (option) {
                 case 1:
@@ -46,7 +48,7 @@ public class AtendimentoMensagem {
                             break;
                         }
 
-                        System.out.println("Digite uma opcao valida");
+                        System.out.println("Digite uma opcao valida!");
                         System.out.println("Voce vai fazer o contato por: 1 - Email 2 - Telefone");
                         contato = sc.nextInt();
                     }
@@ -72,13 +74,16 @@ public class AtendimentoMensagem {
                                 break;
                             }
 
+                            System.out.println("-----------------------------------------------");
                             System.out.println(msg);
+                            System.out.println("-----------------------------------------------");
 
-                            System.out.println("Se a mensagem for sobre uma assunto que possa ser prontamente respondivel digite 1, se precisar ser encaminhado para outro setor, digite 2");
+                            System.out.println("Se a mensagem for sobre uma assunto que possa ser prontamente " + 
+                            "respondivel digite 1\nSe precisar ser encaminhado para outro setor, digite 2");
 
                             int diff = sc.nextInt();
                             while (diff != 1 && diff != 2) {
-                                System.out.println("Digite uma comando valido: ");
+                                System.out.println("Digite um comando valido: ");
                                 diff = sc.nextInt();
                             }
                             
@@ -86,8 +91,8 @@ public class AtendimentoMensagem {
                                 System.out.println("Enviada resposta para cliente: sua solicitação já foi resolvida. Obrigado!!!");
                             }
                             if (diff == 2) {
-                                System.out.println("Essa mensagem e necessaria a transferencia para um outro setor. Porfavor espere mais alguns minutos.");
-                                filaReclamacao.enqueue(msg);
+                                System.out.println("Essa mensagem e necessaria a transferencia para um outro setor. Por favor espere mais alguns minutos.");
+                                filaResolucao.enqueue(msg);
                             }
 
                             break;
@@ -107,7 +112,9 @@ public class AtendimentoMensagem {
                         break;
                     }
 
+                    System.out.println("-----------------------------------------------");
                     System.out.println(msg);
+                    System.out.println("-----------------------------------------------");
 
                     System.out.println("Enviada resposta para cliente: sua solicitação já foi resolvida pelo setor responsável. Obrigado!!!");
                     break;
@@ -119,6 +126,7 @@ public class AtendimentoMensagem {
                     break;
             }
 
+            System.out.println("-----------------------------------------------");
         } while (option != 0);
     }
 
@@ -133,7 +141,7 @@ public class AtendimentoMensagem {
             contact = sc.nextLine();            
         }
         if (contato == 2) {
-            System.out.println("Digite seu telefone");
+            System.out.println("Digite seu telefone:");
             contact = sc.nextLine();
         }
 
@@ -147,7 +155,7 @@ public class AtendimentoMensagem {
         }
         
         sc.nextLine(); // flush
-        System.out.println("Qual e a sua mensagem");
+        System.out.println("Qual e a sua mensagem?");
         String message = sc.nextLine();
         
         return new Mensagem(name, message, contact, reason);

@@ -43,7 +43,12 @@ public class Mensagem {
             aba = "Sugestao";
         }
 
+        if (this.name == "") {
+        return "O contato " + this.contact
+                + " na aba de " + aba + " digitou a mensagem:\n" + this.message;
+        }
+
         return this.name + " com o contato " + this.contact
-                + " na aba de " + aba + "Digitou a mensagem:\n" + this.message;
+                + " na aba de " + aba + " digitou a mensagem:\n" + this.message;
     }
 }

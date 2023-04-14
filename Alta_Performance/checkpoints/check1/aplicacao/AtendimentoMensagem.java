@@ -2,6 +2,9 @@ package aplicacao;
 
 // Integrantes:
 // Lucas Raoni Hideki Antunes RM: 92854
+// Victor Augusto Vieira RM: 94055
+// Gabriel Alves Breviglieri RM: 94349
+// Mateus de Lima Raymundo RM: 95758
 
 import java.util.Scanner;
 

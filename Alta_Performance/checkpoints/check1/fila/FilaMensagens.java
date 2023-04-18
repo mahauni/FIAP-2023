@@ -3,53 +3,60 @@ package fila;
 import entidades.Mensagem;
 
 public class FilaMensagens {
-    private class Node {
-        private Mensagem message;
-        private Node next;
+    private int ini;
+    private int fim;
+    private int N;
+    private Mensagem dados[];
 
-        public Node(Mensagem message) {
-            this.message = message;
-        }
+    public void init(int n) {
+        ini = 0;
+        fim = 0;
+        dados = new Mensagem[n];
     }
 
-    private Node first = null;
-    private Node last = null;
-
     public void enqueue(Mensagem m) {
-        Node node = new Node(m);
-        if (first == null && last == null) {
-            this.first = node;
-            this.last = node;    
+        if (!isFull()) {
+            dados[fim % N] = m;
+            fim++;
+        } else {
+            System.out.println("Queue full");
         }
-
-        this.last.next = node;
-        this.last = node;
     }
 
     public Mensagem dequeue() {
-        Node node = this.first;
-
-        if (this.first == null && this.last == null) {
-            return null;
+        if (!isEmpty()) {
+            Mensagem m = dados[ini % N];
+            ini++;
+            return m;
         }
-
-        if (this.first == this.last) {
-            this.first = null;
-            this.last = null;
-            return node.message;
-        }
-
-        this.first = this.first.next;
-        node.next = null;
-
-        return node.message;
+        return null;
     }
 
     public boolean isEmpty() {
-        if (this.first == null && this.last == null) {
+        if (ini == fim)
             return true;
-        }
+        else
+            return false;
+    }
 
-        return false;
+    public boolean isFull() {
+        if (ini != fim && ini % N == fim % N)
+            return true;
+        else
+            return false;
+    }
+
+    public Mensagem first() {
+        if (isEmpty()) {
+            return null;
+        }
+        return dados[ini % N];
+    }
+
+    public int getIni() {
+        return this.ini;
+    }
+    public int getFim() {
+        return this.fim;
     }
 }

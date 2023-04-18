@@ -18,6 +18,10 @@ public class AtendimentoMensagem {
         FilaMensagens filaSugestao = new FilaMensagens();
         FilaMensagens filaResolucao = new FilaMensagens();
 
+        filaReclamacao.init(10);
+        filaSugestao.init(10);
+        filaResolucao.init(10);
+
         int option;
         int contato;
 

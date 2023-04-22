@@ -107,7 +107,7 @@ public class AtendimentoMensagem {
 
                         System.out.println("Digite uma opcao valida");
                         System.out.println("Qual mensagem voce deseja responder, 1 - Reclamacao 2 - Sugestao");
-                        contato = sc.nextInt();
+                        resp = sc.nextInt();
                     }
                     break;
 

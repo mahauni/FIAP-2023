@@ -6,7 +6,7 @@ public class FilaMensagens {
     private int ini;
     private int fim;
     private int N;
-    private Mensagem dados[];
+    private Mensagem[] dados;
 
     public void init(int n) {
         ini = 0;

@@ -11,7 +11,8 @@ public class FilaMensagens {
     public void init(int n) {
         ini = 0;
         fim = 0;
-        dados = new Mensagem[n];
+        N = n;
+        dados = new Mensagem[N];
     }
 
     public void enqueue(Mensagem m) {
@@ -51,12 +52,5 @@ public class FilaMensagens {
             return null;
         }
         return dados[ini % N];
-    }
-
-    public int getIni() {
-        return this.ini;
-    }
-    public int getFim() {
-        return this.fim;
     }
 }

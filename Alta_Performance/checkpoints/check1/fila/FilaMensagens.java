@@ -34,17 +34,11 @@ public class FilaMensagens {
     }
 
     public boolean isEmpty() {
-        if (ini == fim)
-            return true;
-        else
-            return false;
+        return ini == fim;
     }
 
     public boolean isFull() {
-        if (ini != fim && ini % N == fim % N)
-            return true;
-        else
-            return false;
+        return ini != fim && ini % N == fim % N;
     }
 
     public Mensagem first() {

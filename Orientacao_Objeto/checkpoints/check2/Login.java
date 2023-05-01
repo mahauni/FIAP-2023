@@ -1,35 +1,28 @@
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
-import javax.swing.JTextField;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
 import java.awt.Font;
 
-public class login extends JFrame {
+public class Login extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField userField;
-	private JTextField passwdField;
+	private JPasswordField passwdField;
 	private String names[] = {"logo.png"};
 	private Icon icons[] = {new ImageIcon(getClass().getResource(names[0]))};
 
-	static login loginFrame;	
-	static cadastro cadastroFrame;
-	static index indexFrame;
+	static Login loginFrame;
+	static Cadastro cadastroFrame;
+	static Index indexFrame;
 
-	public login() {
+	public Login() {
 		loginFrame();
 	}
 
-	public void otherPages(login loginPage, cadastro cadastroPage, index indexPage) {
+	public void otherPages(Login loginPage, Cadastro cadastroPage, Index indexPage) {
 		loginFrame = loginPage;
 		cadastroFrame = cadastroPage;
 		indexFrame = indexPage;
@@ -79,7 +72,7 @@ public class login extends JFrame {
 		btnCancelar.setBounds(354, 253, 142, 34);
 		contentPane.add(btnCancelar);
 
-		passwdField = new JTextField();
+		passwdField = new JPasswordField();
 		passwdField.setFont(new Font("Tahoma", Font.PLAIN, 25));
 		passwdField.setColumns(10);
 		passwdField.setBounds(235, 184, 233, 39);
@@ -103,7 +96,7 @@ public class login extends JFrame {
 				System.out.println(password);
 				
 				// if passwd fail says the passwd or the user is wrong
-				if (!verification.verificar(user, password)) {
+				if (!Verification.verificar(user, password)) {
 					passwdField.setText("");
 					JOptionPane.showMessageDialog(null, "Wrong password or user");
 					return;

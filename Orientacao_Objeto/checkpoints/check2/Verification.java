@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class verification {
+public class Verification {
 	static Map<String, String> map = new HashMap<String, String>() {{
 		put("Lucas", "1234");
 		put("Cictor", "123");

@@ -13,7 +13,7 @@ import java.awt.event.ActionEvent;
 import java.awt.Color;
 import java.awt.Font;
 
-public class cadastro extends JFrame {
+public class Cadastro extends JFrame {
 
     private JPanel contentPane;
 	private JTextField userField;
@@ -21,14 +21,14 @@ public class cadastro extends JFrame {
 	private String names[] = {"logo.png"};
 	private Icon icons[] = {new ImageIcon(getClass().getResource(names[0]))};
     
-	static login loginFrame;	
-	static cadastro cadastroFrame;
+	static Login loginFrame;
+	static Cadastro cadastroFrame;
 
-	public cadastro() {
+	public Cadastro() {
 		cadastroFrame();
 	}
 
-	public void otherPages(login loginPage, cadastro cadastroPage) {
+	public void otherPages(Login loginPage, Cadastro cadastroPage) {
 		loginFrame = loginPage;
 		cadastroFrame = cadastroPage;
 	}
@@ -100,7 +100,7 @@ public class cadastro extends JFrame {
 				System.out.println(user);
 				System.out.println(password);
 
-                if (verification.cadastro(user, password)) {
+                if (Verification.cadastro(user, password)) {
 					userField.setText("");
 					passwdField.setText("");
 					JOptionPane.showMessageDialog(null, "Usuario cadastrado");

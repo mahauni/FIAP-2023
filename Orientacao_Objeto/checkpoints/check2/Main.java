@@ -1,9 +1,9 @@
 import java.awt.EventQueue;
 
-public class main {
-    static login loginFrame = new login();
-	static cadastro cadastroFrame = new cadastro();
-	static index indexFrame = new index();
+public class Main {
+    static Login loginFrame = new Login();
+	static Cadastro cadastroFrame = new Cadastro();
+	static Index indexFrame = new Index();
 
 	public static void main(String[] args) {
 

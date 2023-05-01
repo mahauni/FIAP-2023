@@ -12,20 +12,20 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class index extends JFrame {
+public class Index extends JFrame {
 
 	private JPanel contentPane;
 	private String names[] = {"logo.png"};
 	private Icon icons[] = {new ImageIcon(getClass().getResource(names[0]))};
 
-	static login loginFrame;	
-	static index indexFrame;
+	static Login loginFrame;
+	static Index indexFrame;
 
-	public index() {
+	public Index() {
 	    indexFrame();
 	}
 
-	public void otherPages(login loginPage, index indexPage) {
+	public void otherPages(Login loginPage, Index indexPage) {
 		loginFrame = loginPage;
 		indexFrame = indexPage;
 	}

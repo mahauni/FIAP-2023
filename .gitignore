@@ -28,7 +28,8 @@ bin/
 ### Mac OS ###
 .DS_Store
 
-.idea/*
+.idea/
 *.iml
+
 
 KraftChallenge/

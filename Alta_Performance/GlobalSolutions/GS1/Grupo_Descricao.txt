@@ -1,0 +1,44 @@
+Usar esse arquivo para:
+
+	1) Identificar os membros do grupo
+	92854 Lucas Raoni Hideki Antunes
+    94349 Gabriel Alves Breviglieri
+    94055 Victor Augusto Vieira
+
+	2) Apresentar a descrição do projeto desenvolvido
+	A nossa plantação escolhida foi a arroz irrigado.
+	As medidas utilizadas na nossa aplicação forão o pH, salinidade, umidade e nutrientes.
+	E os nutrientes que escolhemos forão o Nitrogênio, Magnésio, Cálcio, Potássio e Fósforo.
+
+	Os nossos alertas serão ativados quando:
+	- O pH for menor q 6 e maior que 7.
+	- A umidade for menor que 18 e 23
+	- A salinidade for maior que 0,35
+	- Se o Cálcio for menor 0,05 e maior que 0,2
+	- Se o Magnésio for menor que 0,2 e maior que 0,5
+	- Se o Nitrogênio for menor que 40 e maior que 60
+	- Se o Fósforo for menor que 3 e maior que 6
+	- Se o Potássio for menor que 20 e maior que 60
+
+
+    Dados com as suas respectivas unidades de medida:
+	pH ideal -> 6 a 7 (6,8 arredodado)
+
+	umidade -> umidade para a retirada 18% e 23% do solo para a colheita
+
+	Salinidade -> Até 0,25% de NaCL e acima de 0,7% tudo morre e acima de 0,5% apenas 2 vive (na água)
+
+	teor de Ca for maior que 2,0 cmolc dm-3 e de Mg 5,0 cmolc dm-3
+
+	40 a 60 kg/ha de N
+
+	o nível crítico está em torno de 6 mg/kg de P e abaixo de 3 pode ser problematico
+
+	K potassio -> 20 a 60 kg/ha
+
+    Refêrencias:
+    https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/573569/1/Aspectosdaadubacao.pdf
+    https://ainfo.cnptia.embrapa.br/digital/bitstream/item/75157/1/0000001816-ResumoFertBio2012-W.B.Scivittaro.pdf
+    https://www.mt.com/br/pt/home/library/applications/lab-analytical-instruments/measurement-pH-of-rice.html
+    https://www.agrolink.com.br/culturas/arroz/informacoes-da-cultura/nutricao/fertilidade_361590.html#:~:text=O%20pH%20adequado%20para%20o,em%20torno%20de%205%2C5.&text=As%20transforma%C3%A7%C3%B5es%20que%20ocorrem%20quando,principalmente%20P%2C%20K%20e%20Ca
+    https://blog.aegro.com.br/adubacao-para-arroz/#:~:text=A%20recomenda%C3%A7%C3%A3o%20da%20aduba%C3%A7%C3%A3o%20de,cobertura%20no%20in%C3%ADcio%20do%20afilhamento

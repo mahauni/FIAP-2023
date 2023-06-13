@@ -1,0 +1,12 @@
+Integrantes:
+    92854 Lucas Raoni Hideki Antunes
+    94349 Gabriel Alves Breviglieri
+    94055 Victor Augusto Vieira
+
+Solução:
+A nossa solução se baseia na criação de uma AI, que por causa da sua alta conectividade com a internet, ela conseguirá
+ter noção das diversas tecnologias que estão saindo para um melhor cultivo da plantação, mas por ter grande número de
+tecnologias algumas delas acabam não sendo facilmente encontradas, porém com essa AI, quando o agricultor digitar os
+seus problemas, a AI vai reconhecer o problema, e então propor soluções ambientalmente positivas, com tecnologias
+avançadas e com métodos de plantação mais avançados para o cultivo que a pessoa selecionou. Mas a AI só recomendará
+as tecnologias que são sustentáveis, para que o problema encontrado não seja corrigido de maneira dolosa a natureza.

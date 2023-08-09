@@ -1,6 +1,6 @@
 import java.awt.EventQueue;
 
-public class Main {
+public class MainScreen {
     static Login loginFrame = new Login();
 	static Cadastro cadastroFrame = new Cadastro();
 	static Index indexFrame = new Index();

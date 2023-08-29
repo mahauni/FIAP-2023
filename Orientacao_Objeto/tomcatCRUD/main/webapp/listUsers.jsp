@@ -14,7 +14,9 @@
 	<ol>
 		<c:forEach items="${users}" var="user">
 			<li>${user.name} - ${user.email} - 
-			<fmt:formatDate value="${user.loginDate}" />
+				<fmt:formatDate value="${user.loginDate}" />
+				<a href="/SimulationCRUD/removeUser?id=${ user.id }">remove</a>
+				<a href="/SimulationCRUD/editUser?id=${ user.id }">edit</a>
 			</li>
 		</c:forEach>
 	</ol>

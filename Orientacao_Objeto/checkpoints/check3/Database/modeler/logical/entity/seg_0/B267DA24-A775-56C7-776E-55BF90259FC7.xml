@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B267DA24-A775-56C7-776E-55BF90259FC7" name="ESG">
+<createdBy>lucas</createdBy>
+<createdTime>2023-08-14 23:49:11 UTC</createdTime>
+<ownerDesignName>modeler</ownerDesignName>
+<engineerTo>
+<item key="9836BA4A-AD9D-DBB4-3AD0-F1548EEFF04C" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_ESG" id="0B8FB391-95AF-70EB-EE84-E08B1CD4D7E2">
+<createdBy>lucas</createdBy>
+<createdTime>2023-08-14 23:49:25 UTC</createdTime>
+<ownerDesignName>modeler</ownerDesignName>
+<engineerTo>
+<item key="9836BA4A-AD9D-DBB4-3AD0-F1548EEFF04C" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NOME_ESG" id="D86C20DC-A8D0-F138-E503-469D54CA6FFE">
+<createdBy>lucas</createdBy>
+<createdTime>2023-08-14 23:49:33 UTC</createdTime>
+<ownerDesignName>modeler</ownerDesignName>
+<engineerTo>
+<item key="9836BA4A-AD9D-DBB4-3AD0-F1548EEFF04C" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DESCRICAO" id="849A6907-39A9-E2FF-DEEE-4223DE2CB352">
+<createdBy>lucas</createdBy>
+<createdTime>2023-08-14 23:49:38 UTC</createdTime>
+<ownerDesignName>modeler</ownerDesignName>
+<engineerTo>
+<item key="9836BA4A-AD9D-DBB4-3AD0-F1548EEFF04C" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="2AC9FD64-1EA0-6486-A19F-D3F21A5D8271" name="ESG PK">
+<createdBy>lucas</createdBy>
+<createdTime>2023-08-14 23:53:14 UTC</createdTime>
+<ownerDesignName>modeler</ownerDesignName>
+<engineerTo>
+<item key="9836BA4A-AD9D-DBB4-3AD0-F1548EEFF04C" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0B8FB391-95AF-70EB-EE84-E08B1CD4D7E2</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

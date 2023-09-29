@@ -42,4 +42,13 @@ public class Esg {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    @Override
+    public String toString() {
+        return "Esg{" +
+                "id=" + id +
+                ", enumEsg=" + enumEsg +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }

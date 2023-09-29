@@ -18,7 +18,7 @@ public class PersonDAO {
 
     // make the telephone to be nullif
     public void insert(Person Person) {
-        String sql = "INSERT INTO PERSONS(NAME, EMAIL, TELEPHONE) VALUES(?, ?, NULLIF(?, null))";
+        String sql = "INSERT INTO PERSONS(NAME_PERSON, EMAIL, TELEPHONE) VALUES(?, ?, NULLIF(?, null))";
 
         try {
             PreparedStatement stmt = connection.prepareStatement(sql);
@@ -35,7 +35,7 @@ public class PersonDAO {
     }
 
     public void delete(int id) {
-        String sql = "DELETE FROM PERSONS WHERE ID=?";
+        String sql = "DELETE FROM PERSONS WHERE ID_PERSON=?";
         try {
             PreparedStatement stmt = connection.prepareStatement(sql);
             stmt.setInt(1, id);
@@ -48,7 +48,7 @@ public class PersonDAO {
     }
 
     public void update(Person Person) {
-        String sql = "UPDATE PERSONS SET NAME=?, EMAIL=?, TELEPHONE=NULLIF(?, null) WHERE ID=?";
+        String sql = "UPDATE PERSONS SET NAME_PERSON=?, EMAIL=?, TELEPHONE=NULLIF(?, null) WHERE ID_PERSON=?";
 
         try {
             PreparedStatement stmt = connection.prepareStatement(sql);
@@ -74,8 +74,8 @@ public class PersonDAO {
 
             while (rs.next()) {
                 Person Person = new Person();
-                Person.setId(rs.getInt("ID"));
-                Person.setName(rs.getString("NAME"));
+                Person.setId(rs.getInt("ID_PERSON"));
+                Person.setName(rs.getString("NAME_PERSON"));
                 Person.setEmail(rs.getString("EMAIL"));
                 Person.setTelephone(rs.getString("TELEPHONE"));
 
@@ -92,7 +92,7 @@ public class PersonDAO {
 
     public Person selectById(int id) {
         Person Person = null;
-        String sql = "SELECT * FROM PERSONS WHERE ID=?";
+        String sql = "SELECT * FROM PERSONS WHERE ID_PERSON=?";
         try {
             PreparedStatement stmt = connection.prepareStatement(sql);
             stmt.setLong(1, id);
@@ -100,8 +100,8 @@ public class PersonDAO {
 
             while (rs.next()) {
                 Person = new Person();
-                Person.setId(rs.getInt("ID"));
-                Person.setName(rs.getString("NAME"));
+                Person.setId(rs.getInt("ID_PERSON"));
+                Person.setName(rs.getString("NAME_PERSON"));
                 Person.setEmail(rs.getString("EMAIL"));
                 Person.setTelephone(rs.getString("TELEPHONE"));
             }

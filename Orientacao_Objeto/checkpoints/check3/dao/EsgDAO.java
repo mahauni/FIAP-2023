@@ -18,7 +18,7 @@ public class EsgDAO {
         this.connection = connection;
     }
     public void insert(Esg Esg) {
-        String sql = "INSERT INTO Esg(Esg, DESCRIPTION) VALUES(?, ?)";
+        String sql = "INSERT INTO ESG(NAME_ESG, DESCRIPTION) VALUES(?, ?)";
 
         try {
             PreparedStatement stmt = connection.prepareStatement(sql);
@@ -34,7 +34,7 @@ public class EsgDAO {
     }
 
     public void delete(int id) {
-        String sql = "DELETE FROM Esg WHERE ID=?";
+        String sql = "DELETE FROM ESG WHERE ID_ESG=?";
         try {
             PreparedStatement stmt = connection.prepareStatement(sql);
             stmt.setInt(1, id);
@@ -48,7 +48,7 @@ public class EsgDAO {
 
     // maybe do something that only this one can set the id and others not
     public void update(Esg Esg) {
-        String sql = "UPDATE Esg SET Esg=?, DESCRIPTION=? WHERE ID=?";
+        String sql = "UPDATE ESG SET NAME_ESG=?, DESCRIPTION=? WHERE ID_ESG=?";
 
         try {
             PreparedStatement stmt = connection.prepareStatement(sql);
@@ -66,15 +66,15 @@ public class EsgDAO {
 
     public List<Esg> selectAll() {
         List<Esg> Esgs = new ArrayList<>();
-        String sql = "SELECT * FROM Esg";
+        String sql = "SELECT * FROM ESG";
         try {
             PreparedStatement stmt = connection.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
 
             while (rs.next()) {
                 Esg Esg = new Esg();
-                Esg.setId(rs.getInt("ID"));
-                Esg.setEsg(enumEsg.valueOf(rs.getString("Esg")));
+                Esg.setId(rs.getInt("ID_ESG"));
+                Esg.setEsg(enumEsg.valueOf(rs.getString("NAME_ESG")));
                 Esg.setDescription(rs.getString("DESCRIPTION"));
 
                 Esgs.add(Esg);
@@ -89,7 +89,7 @@ public class EsgDAO {
 
     public Esg selectById(int id) {
         Esg Esg = null;
-        String sql = "SELECT * FROM Esg WHERE ID=?";
+        String sql = "SELECT * FROM ESG WHERE ID_ESG=?";
         try {
             PreparedStatement stmt = connection.prepareStatement(sql);
             stmt.setLong(1, id);
@@ -97,8 +97,8 @@ public class EsgDAO {
 
             while (rs.next()) {
                 Esg = new Esg();
-                Esg.setId(rs.getInt("ID"));
-                Esg.setEsg(enumEsg.valueOf(rs.getString("Esg")));
+                Esg.setId(rs.getInt("ID_ESG"));
+                Esg.setEsg(enumEsg.valueOf(rs.getString("NAME_ESG")));
                 Esg.setDescription(rs.getString("DESCRIPTION"));
             }
 

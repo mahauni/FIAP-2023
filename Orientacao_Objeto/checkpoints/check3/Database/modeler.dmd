@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="modeler" id="3CF3C08E-917B-93F6-88AC-91471AD642B4" version="3.5">
+<createdBy>lucas</createdBy>
+<createdTime>2023-08-14 23:46:59 UTC</createdTime>
+<ownerDesignName>modeler</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>3CF3C08E-917B-93F6-88AC-91471AD642B4</designId>
+</OSDM_Design>

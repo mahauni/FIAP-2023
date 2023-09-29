@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="B267DA24-A775-56C7-776E-55BF90259FC7" name="ESG" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="5F6F41D0-3ADF-3EB5-CC29-6DFA323D7E94" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Entity" objectID="F664C948-B807-4AFA-46E9-14BAC5022D50" name="PESSOAS" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="5F6F41D0-3ADF-3EB5-CC29-6DFA323D7E94" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Entity" objectID="7538FF0C-4303-2A8C-CE23-440ABE17A93F" name="PROBLEMAS" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="5F6F41D0-3ADF-3EB5-CC29-6DFA323D7E94" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Relation" objectID="F8A9FAE4-3E2C-528C-75F4-B11566012F1D" name="Relation_1" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Relation" propertyParentId="5F6F41D0-3ADF-3EB5-CC29-6DFA323D7E94" propertySourceId="B267DA24-A775-56C7-776E-55BF90259FC7" propertyTargetId="7538FF0C-4303-2A8C-CE23-440ABE17A93F"/>
+   <object objectType="Relation" objectID="261D377D-9BB4-FA79-421E-1B1649AA5492" name="Relation_2" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Relation" propertyParentId="5F6F41D0-3ADF-3EB5-CC29-6DFA323D7E94" propertySourceId="F664C948-B807-4AFA-46E9-14BAC5022D50" propertyTargetId="7538FF0C-4303-2A8C-CE23-440ABE17A93F"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

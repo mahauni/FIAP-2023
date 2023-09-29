@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F664C948-B807-4AFA-46E9-14BAC5022D50" name="PESSOAS">
+<createdBy>lucas</createdBy>
+<createdTime>2023-08-14 23:49:54 UTC</createdTime>
+<ownerDesignName>modeler</ownerDesignName>
+<engineerTo>
+<item key="9836BA4A-AD9D-DBB4-3AD0-F1548EEFF04C" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_PESSOA" id="1E5F92A1-F733-658A-749A-E5521959835C">
+<createdBy>lucas</createdBy>
+<createdTime>2023-08-14 23:50:04 UTC</createdTime>
+<ownerDesignName>modeler</ownerDesignName>
+<engineerTo>
+<item key="9836BA4A-AD9D-DBB4-3AD0-F1548EEFF04C" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="EMAIL" id="C20A8008-2A34-18B3-9A81-C86FC96F10A6">
+<createdBy>lucas</createdBy>
+<createdTime>2023-08-14 23:50:13 UTC</createdTime>
+<ownerDesignName>modeler</ownerDesignName>
+<engineerTo>
+<item key="9836BA4A-AD9D-DBB4-3AD0-F1548EEFF04C" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TELEFONE" id="7BDEE1E1-6892-C364-5766-5CDB1202B0F2">
+<createdBy>lucas</createdBy>
+<createdTime>2023-08-14 23:50:18 UTC</createdTime>
+<ownerDesignName>modeler</ownerDesignName>
+<engineerTo>
+<item key="9836BA4A-AD9D-DBB4-3AD0-F1548EEFF04C" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NOME_PESSOA" id="6C4D2E45-A7E0-0EA5-0464-2A578763C574">
+<createdBy>lucas</createdBy>
+<createdTime>2023-08-14 23:50:23 UTC</createdTime>
+<ownerDesignName>modeler</ownerDesignName>
+<engineerTo>
+<item key="9836BA4A-AD9D-DBB4-3AD0-F1548EEFF04C" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6481E2EF-3049-4155-B871-FA3CEE83440C" name="PESSOAS PK">
+<createdBy>lucas</createdBy>
+<createdTime>2023-08-14 23:53:22 UTC</createdTime>
+<ownerDesignName>modeler</ownerDesignName>
+<engineerTo>
+<item key="9836BA4A-AD9D-DBB4-3AD0-F1548EEFF04C" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1E5F92A1-F733-658A-749A-E5521959835C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

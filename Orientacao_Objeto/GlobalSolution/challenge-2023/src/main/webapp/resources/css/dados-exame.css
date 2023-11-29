@@ -1,0 +1,126 @@
+body {
+    background-image: url('teste-dois.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; 
+    min-height: 100vh;
+}
+.menu-header, .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+}
+.menu-items {
+    display: flex;
+    gap: 20px;
+    width: 50%;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px; 
+    border: 2px solid #333; 
+    border-radius: 10px; 
+    transition: background-color 0.3s;
+    
+}
+
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    height: 6%;
+}
+
+.menu-item a:hover {
+    background-color: #f0f0f0; 
+}
+
+.menu-item1 {
+    display: flex;
+    align-items: center; 
+    margin-right: 20px; 
+}
+
+.menu-item1 p {
+    margin-right: 10px;
+}
+
+.menu-item1 img {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    display: flex; 
+    align-items: center; 
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com opacidade */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    width: 300px;
+    text-align: center;
+    margin: auto; /* Centralizar horizontalmente */
+    max-width: 80%; /* Largura máxima */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #3498db; /* Azul suave */
+    color: #fff; /* Branco */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #2980b9; /* Tom mais escuro de azul suave */
+}
+
+.logout-button {
+    background-color: #d9534f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.logout-button:hover {
+    background-color: #c9302c;
+}
+

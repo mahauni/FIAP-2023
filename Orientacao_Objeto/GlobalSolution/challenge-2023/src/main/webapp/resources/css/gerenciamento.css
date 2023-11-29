@@ -1,0 +1,136 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-image: url('teste-dois.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    position: fixed;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: left; 
+    width: 100%;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+.menu-title, .menu-item {
+    text-align: center;
+    margin-top: 5%;
+    color: #ffffff;
+}
+
+.menu-item:hover {
+    background-color: #555;
+}
+
+.conteudo-tabela {
+    margin-top: 20px;
+    width: 100%;
+    height: calc(100vh - 40px);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.conteudo-aba h2 {
+    text-align: left;
+}
+
+.container {
+    display: flex;
+}
+
+.menu-container {
+    width: 200px;
+    background-color: #2c3e50; /* Azul mais escuro */
+    color: #ecf0f1; /* Branco suave */
+    padding: 20px;
+    height: calc(100vh - 40px);
+    box-sizing: border-box;
+}
+
+.menu-title {
+    margin-bottom: 20px;
+}
+
+.menu-item {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.fundo-aba {
+    background-color: #3498db; /* Azul suave */
+    padding: 8px;
+    border-radius: 5px;
+}
+
+#abaGerenciarPacientes {
+    margin-top: 25%;
+    margin-left: 18%;
+    margin-right: 7px;
+    position: absolute;
+}
+
+table {
+    margin: auto;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #3498db; /* Azul suave */
+    color: #fff; /* Branco */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Branco suave */
+}
+
+button {
+    background-color: #3498db; /* Azul suave */
+    color: #fff; /* Branco */
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9; /* Tom mais escuro de azul suave */
+}
+
+.logout-button {
+    background-color: #d9534f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.logout-button:hover {
+    background-color: #c9302c;
+}
+
